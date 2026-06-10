@@ -1,26 +1,139 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FAFAF8; /* Warm off-white background */
+  --foreground: #111827; /* Deep charcoal typography */
+  --selection-bg: #e0e7ff; /* Indigo-100 selection */
+  
+  /* Custom Tailwind v4 theme colors */
+  --color-accent-indigo: #4f46e5;
+  --color-accent-violet: #7c3aed;
+  --color-accent-slate: #64748b;
+  --color-charcoal: #111827;
+  --color-charcoal-muted: #4b5563;
+  --color-warm-gray: #f3f3f0;
+  --color-warm-white: #fafaf8;
+  --color-warm-card: #fdfdfc;
+  
+  /* Flagship dark navy variables */
+  --flagship-bg: #0b0f19;
+  --flagship-fg: #f9fafb;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-accent-indigo: var(--color-accent-indigo);
+  --color-accent-violet: var(--color-accent-violet);
+  --color-accent-slate: var(--color-accent-slate);
+  --color-charcoal: var(--color-charcoal);
+  --color-charcoal-muted: var(--color-charcoal-muted);
+  --color-warm-gray: var(--color-warm-gray);
+  --color-warm-white: var(--color-warm-white);
+  --color-warm-card: var(--color-warm-card);
+  --color-flagship-bg: var(--flagship-bg);
+  --color-flagship-fg: var(--flagship-fg);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+::selection {
+  background-color: var(--selection-bg);
+  color: var(--foreground);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--background);
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Glassmorphism for Top Navigation Floating Bar */
+.glass-nav {
+  background-color: rgba(250, 250, 248, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(17, 24, 39, 0.04);
+}
+
+/* Glowing text sweep animation for Hero tagline */
+@keyframes text-sweep {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.animate-tagline {
+  background: linear-gradient(90deg, #4f46e5, #7c3aed, #818cf8, #7c3aed, #4f46e5);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-sweep 5s linear infinite;
+  display: inline-block;
+}
+
+/* Interactive papers stack animations for Publications section */
+.paper-stack {
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.paper-stack:hover .paper-top {
+  transform: translate(-10px, -15px) rotate(-2deg);
+}
+.paper-stack:hover .paper-middle {
+  transform: translate(5px, -5px) rotate(1deg);
+}
+.paper-stack:hover .paper-bottom {
+  transform: translate(15px, 5px) rotate(3deg);
+}
+
+/* Custom visual chart drawing */
+.chart-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw-chart 3s ease-out forwards infinite alternate;
+}
+@keyframes draw-chart {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Headshot Sparkles Pulse Glow */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.25; transform: scale(1); }
+  50% { opacity: 0.75; transform: scale(1.03); }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 6s ease-in-out infinite;
+}
+
+/* Dashboard specific style extensions */
+.dashboard-text-muted {
+  color: rgba(255, 255, 255, 0.45);
+}
+.dashboard-border {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+.dashboard-bg-card {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Subtle, custom scrollbar matching warm/charcoal palette */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #e4e4e0;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d1d1cc;
 }

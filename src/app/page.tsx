@@ -230,7 +230,7 @@ export default function Home() {
             <a href="#about" className="text-xs font-semibold uppercase tracking-wider text-charcoal-muted hover:text-accent-violet transition-colors">About</a>
             <a href="#projects" className="text-xs font-semibold uppercase tracking-wider text-charcoal-muted hover:text-accent-violet transition-colors">Projects</a>
             <a href="#publications" className="text-xs font-semibold uppercase tracking-wider text-charcoal-muted hover:text-accent-violet transition-colors">Publications</a>
-            <a href="#contact" className="text-xs font-semibold uppercase tracking-wider text-charcoal-muted hover:text-accent-violet transition-colors">Contact</a>
+            {/* <a href="#contact" className="text-xs font-semibold uppercase tracking-wider text-charcoal-muted hover:text-accent-violet transition-colors">Contact</a> */}
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -267,20 +267,20 @@ export default function Home() {
             >
               Publications
             </a>
-            <a
+            {/* <a
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
               className="text-xs font-semibold uppercase tracking-wider text-charcoal-muted hover:text-accent-violet transition-colors"
             >
               Contact
-            </a>
+            </a> */}
           </div>
         )}
       </header>
 
       <main className="flex-grow">
         {/* Hero Section & About Section (Story & Badges matching mockup) */}
-        <section id="about" className="relative overflow-hidden pt-20 pb-20 lg:pt-28 lg:pb-28 border-b border-charcoal/5">
+        <section id="about" className="relative overflow-hidden pt-12 pb-20 lg:pt-16 lg:pb-28 border-b border-charcoal/5">
           {/* Soft particles background */}
           <ParticleCanvas />
           
@@ -371,122 +371,34 @@ export default function Home() {
                   >
                     Publications
                   </a>
-                  <a
+                  {/* <a
                     href="#contact"
                     className="inline-flex items-center justify-center text-xs font-bold uppercase tracking-wider text-charcoal hover:underline transition-all duration-200"
                   >
                     Contact
-                  </a>
+                  </a> */}
                 </div>
               </div>
 
-              {/* Right Column: Visual Anchor (Headshot with custom SVG network style) */}
-              <div className="lg:col-span-5 flex justify-center relative items-center py-6">
-                
-                {/* SVG Network Lines - Back layer (behind photo) */}
-                <div className="absolute inset-0 pointer-events-none z-0 flex items-center justify-center scale-110">
-                  <svg className="w-full h-full max-w-[400px] max-h-[400px]" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                      <filter id="bg-glow" x="-20%" y="-20%" width="140%" height="140%">
-                        <feGaussianBlur stdDeviation="6" result="blur" />
-                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                      </filter>
-                      <linearGradient id="bg-line-grad" x1="100%" y1="100%" x2="0%" y2="0%">
-                        <stop offset="0%" stopColor="#4f46e5" stopOpacity="0.4" />
-                        <stop offset="100%" stopColor="#7c3aed" stopOpacity="0.05" />
-                      </linearGradient>
-                    </defs>
-                    
-                    {/* Leftward background paths */}
-                    <path d="M 230 240 Q 140 200 80 150" stroke="url(#bg-line-grad)" strokeWidth="1.2" strokeLinecap="round" filter="url(#bg-glow)" />
-                    <circle cx="80" cy="150" r="2" fill="#818cf8" opacity="0.6" />
-                    
-                    <path d="M 230 240 Q 120 280 60 220" stroke="url(#bg-line-grad)" strokeWidth="1" strokeLinecap="round" filter="url(#bg-glow)" />
-                    <circle cx="60" cy="220" r="1.5" fill="#c084fc" opacity="0.5" />
-                    
-                    <path d="M 230 240 Q 170 140 100 90" stroke="url(#bg-line-grad)" strokeWidth="1.2" strokeLinecap="round" filter="url(#bg-glow)" />
-                    <circle cx="100" cy="90" r="2.5" fill="#818cf8" opacity="0.7" />
-                  </svg>
+              {/* Right Column: Portrait with a restrained orbital accent */}
+              <div className="headshot-visual lg:col-span-5 hidden lg:flex justify-center relative items-center py-10">
+                <div className="headshot-glow" aria-hidden="true"></div>
+                <div className="headshot-halo" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
 
-                {/* Soft glowing violet/indigo backdrop */}
-                <div className="absolute w-80 h-80 bg-accent-violet/15 rounded-full blur-3xl -z-10 animate-pulse"></div>
-
-                {/* Photo container - rounded rectangle aspect ratio */}
-                <div className="relative w-64 h-80 sm:w-72 sm:h-[360px] rounded-[2.5rem] overflow-hidden shadow-2xl z-10 bg-[#0e1220] group">
-                  <Image 
-                    src="/headshot.jpg" 
+                <div className="headshot-frame group">
+                  <Image
+                    src="/headshot.png"
                     alt="Olga Scrivner"
                     fill
-                    sizes="(max-width: 640px) 256px, 288px"
+                    sizes="285px"
                     priority
-                    className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                    className="object-cover object-[42%_center] transition-transform duration-700 group-hover:scale-[1.02]"
                   />
-                  
-                  {/* Subtle vignette gradient inside photo to integrate with the dark theme */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0e1220]/30 via-transparent to-transparent pointer-events-none"></div>
                 </div>
-
-                {/* SVG Network Lines - Front layer (overlapping photo and fanning out to the right) */}
-                <div className="absolute inset-0 pointer-events-none z-20 flex items-center justify-center scale-110">
-                  <svg className="w-full h-full max-w-[400px] max-h-[400px] overflow-visible" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                      <filter id="front-glow" x="-30%" y="-30%" width="160%" height="160%">
-                        <feGaussianBlur stdDeviation="5" result="blur" />
-                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                      </filter>
-                      <linearGradient id="glow-cyan" x1="0%" y1="100%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="#7c3aed" stopOpacity="0.2" />
-                        <stop offset="60%" stopColor="#38bdf8" stopOpacity="0.8" />
-                        <stop offset="100%" stopColor="#60a5fa" stopOpacity="0.9" />
-                      </linearGradient>
-                      <linearGradient id="glow-purple" x1="0%" y1="100%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="#4f46e5" stopOpacity="0.1" />
-                        <stop offset="50%" stopColor="#c084fc" stopOpacity="0.8" />
-                        <stop offset="100%" stopColor="#f472b6" stopOpacity="0.9" />
-                      </linearGradient>
-                    </defs>
-
-                    {/* Rightward fanning glowing paths starting from her right shoulder area (~230, 240) */}
-                    
-                    {/* Path 1: Cyan/Blue main sweep */}
-                    <path d="M 230 240 Q 280 200 350 170" stroke="url(#glow-cyan)" strokeWidth="2" strokeLinecap="round" filter="url(#front-glow)" className="animate-pulse-glow" />
-                    <circle cx="350" cy="170" r="5" fill="#38bdf8" filter="url(#front-glow)" className="animate-ping" style={{ animationDuration: "4s" }} />
-                    <circle cx="350" cy="170" r="3" fill="#fff" />
-
-                    {/* Path 2: Purple/Indigo sweep */}
-                    <path d="M 230 240 Q 310 180 340 100" stroke="url(#glow-purple)" strokeWidth="1.5" strokeLinecap="round" filter="url(#front-glow)" className="animate-pulse-glow" style={{ animationDelay: "1s" }} />
-                    <circle cx="340" cy="100" r="4.5" fill="#c084fc" filter="url(#front-glow)" className="animate-ping" style={{ animationDuration: "5s" }} />
-                    <circle cx="340" cy="100" r="2.5" fill="#fff" />
-
-                    {/* Path 3: Lower right sweep */}
-                    <path d="M 230 240 Q 320 250 370 210" stroke="url(#glow-cyan)" strokeWidth="1.2" strokeLinecap="round" filter="url(#front-glow)" className="animate-pulse-glow" style={{ animationDelay: "0.5s" }} />
-                    <circle cx="370" cy="210" r="4" fill="#38bdf8" filter="url(#front-glow)" />
-                    <circle cx="370" cy="210" r="2" fill="#e0f2fe" />
-
-                    {/* Path 4: High arc towards top right */}
-                    <path d="M 230 240 Q 290 130 380 90" stroke="url(#glow-cyan)" strokeWidth="1.8" strokeLinecap="round" filter="url(#front-glow)" className="animate-pulse-glow" style={{ animationDelay: "2s" }} />
-                    <circle cx="380" cy="90" r="5.5" fill="#38bdf8" filter="url(#front-glow)" className="animate-ping" style={{ animationDuration: "3.5s" }} />
-                    <circle cx="380" cy="90" r="3" fill="#fff" />
-
-                    {/* Path 5: Bottom right sweep */}
-                    <path d="M 230 240 Q 300 300 350 330" stroke="url(#glow-purple)" strokeWidth="1.2" strokeLinecap="round" filter="url(#front-glow)" className="animate-pulse-glow" style={{ animationDelay: "1.5s" }} />
-                    <circle cx="350" cy="330" r="3" fill="#f472b6" filter="url(#front-glow)" />
-                    <circle cx="350" cy="330" r="1.5" fill="#fff" />
-
-                    {/* Path 6: Upward curve near right edge */}
-                    <path d="M 230 240 Q 250 150 280 80" stroke="url(#glow-purple)" strokeWidth="1.6" strokeLinecap="round" filter="url(#front-glow)" className="animate-pulse-glow" style={{ animationDelay: "2.5s" }} />
-                    <circle cx="280" cy="80" r="5" fill="#c084fc" filter="url(#front-glow)" className="animate-ping" style={{ animationDuration: "4.5s" }} />
-                    <circle cx="280" cy="80" r="2.5" fill="#fff" />
-
-                    {/* Additional floating particle nodes in the background for depth */}
-                    <circle cx="310" cy="140" r="2" fill="#60a5fa" filter="url(#front-glow)" />
-                    <circle cx="360" cy="260" r="2.5" fill="#a78bfa" filter="url(#front-glow)" />
-                    <circle cx="260" cy="180" r="1.5" fill="#fff" opacity="0.8" />
-                    <circle cx="330" cy="290" r="1.8" fill="#38bdf8" filter="url(#front-glow)" />
-                  </svg>
-                </div>
-
               </div>
 
             </div>
@@ -989,6 +901,7 @@ export default function Home() {
         </section>
 
         {/* Section: Contact */}
+        {/* 
         <section id="contact" className="py-20 lg:py-24 bg-warm-white">
           <div className="max-w-4xl mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
@@ -1025,8 +938,9 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-
+*/}
               {/* Form Card */}
+              {/*
               <div className="bg-warm-card border border-charcoal/5 rounded-xl p-8 shadow-sm">
                 <form onSubmit={handleContactSubmit} className="space-y-5">
                   <div>
@@ -1103,6 +1017,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        */}
       </main>
 
       {/* Dark Navy Footer matching mockup */}

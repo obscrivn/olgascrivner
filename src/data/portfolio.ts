@@ -54,13 +54,13 @@ export const personalInfo = {
   title: "AI Researcher • Educator • Builder",
   headline: "Building trustworthy AI systems for healthcare and society.",
   bio: "Working at the intersection of AI evaluation, agentic AI, healthcare operations, and responsible AI.",
-  subHeadline: "Co-Founder & Head of AI at Scrivner Solutions • Building Radient AI • Former OpenAI Expert Consultant • Assistant Professor at Rose-Hulman Institute of Technology",
+  subHeadline: "Co-Founder & Head of AI at Scrivner Solutions Inc • Building Radient AI • Former OpenAI Expert Consultant • Assistant Professor at Rose-Hulman Institute of Technology",
   email: "olga@scrivnersolutions.com",
   socials: {
     linkedin: "https://www.linkedin.com/in/olgascrivner/",
-    github: "https://github.com/oscrivner",
+    github: "https://github.com/obscrivn",
     scholar: "https://scholar.google.com/citations?user=M4J1-awAAAAJ",
-    orcid: "https://orcid.org/0000-0002-3687-7323",
+    orcid: "https://orcid.org/0000-0001-7267-1733",
   }
 };
 
@@ -77,27 +77,27 @@ export const experiences: Experience[] = [
   {
     role: "Co-Founder & Head of AI",
     organization: "Scrivner Solutions / Radient AI",
-    period: "2021 – Present",
+    period: "2022 – Present",
     description: "Directing AI architecture and product engineering for Radient AI, an operations intelligence platform deployed in clinical and healthcare settings to streamline radiology workflows.",
     current: true
   },
   {
     role: "Assistant Professor of Computer Science",
     organization: "Rose-Hulman Institute of Technology",
-    period: "2020 – Present",
+    period: "2021 – Present",
     description: "Teaching core computer science, machine learning, and AI. Directing student research initiatives in agentic workflows, natural language processing, and ethical AI development.",
     current: true
   },
   {
     role: "Expert Consultant",
     organization: "OpenAI",
-    period: "2023 – 2024",
+    period: "2024 – 2025",
     description: "Contributed to OpenAI's human data initiatives, model alignment, and evaluations, ensuring safety, reliability, and precision of large-scale foundation models.",
   },
   {
     role: "Research Scientist",
     organization: "CNS Cyberinfrastructure for Network Science Center, Indiana University Bloomington",
-    period: "2018 – 2020",
+    period: "2017 – 2021",
     description: "Conducted advanced NLP, machine learning, and network science research, focused on automated text mining, semantic analysis, and skill discrepancy mapping.",
   }
 ];
@@ -109,7 +109,7 @@ export const projects: Project[] = [
     category: "Flagship",
     role: "Co-Founder & Head of AI",
     tags: ["Healthcare AI", "Agentic Systems", "LLM Orchestration", "Operations"],
-    link: "https://scrivnersolutions.com"
+    link: "https://github.com/scrivner-solutions/radient-ai-demo"
   },
   {
     title: "Scrivner Solutions",
@@ -117,7 +117,7 @@ export const projects: Project[] = [
     category: "Core Work",
     role: "Head of AI & Partner",
     tags: ["Consulting", "Generative AI", "Enterprise AI", "Engineering"],
-    link: "https://scrivnersolutions.com"
+    link: "https://scrivner-solutions.com/"
   },
   {
     title: "AI Evaluation & Multi-Agent Workflows",
@@ -157,7 +157,7 @@ export const publications: Publication[] = [
     venue: "Proceedings of the National Academy of Sciences (PNAS)",
     year: "2018",
     type: "journal",
-    link: "https://www.pnas.org/doi/10.1073/pnas.1804130115"
+    link: "https://www.pnas.org/doi/full/10.1073/pnas.1804247115"
   },
   {
     title: "Back to business and (re) employing workers? Labor market activity during state COVID-19 reopenings",
@@ -165,65 +165,26 @@ export const publications: Publication[] = [
     venue: "NBER Working Paper / Policy Report",
     year: "2020",
     type: "report",
-    link: "https://www.nber.org/papers/w27585"
+    link: "https://www.nber.org/system/files/working_papers/w27419/w27419.pdf"
   },
   {
-    title: "Augmented reality digital technologies (ARDT) for foreign language teaching and learning",
+    title: "Mapping the co-evolution of artificial intelligence, robotics, and the internet of things over 20 years (1998-2017)",
     authors: "O. Scrivner, et al.",
-    venue: "Computer Assisted Language Learning",
-    year: "2016",
+    venue: "Plos One",
+    year: "2020",
     type: "journal",
-    link: "https://www.tandfonline.com/doi/abs/10.1080/09588221.2016.1144799"
+    link: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0242984"
+  },
+  {
+    title: "The AI Applications in Radiology: Regulation, Evaluation, and Usage",
+    authors: "O. Scrivner, et al.",
+    venue: "Proceedings of the Midwest Instruction and Computing Symposium",
+    year: "2024",
+    type: "conference",
+    link: "https://d1wqtxts1xzle7.cloudfront.net/113150443/The_AI_Applications_in_Radiology_Olinger_Scrivner_Proceedings_MICS_2024-libre.pdf"
   }
 ];
 
-export const talks: Talk[] = [
-  {
-    title: "Building Reliable AI: From Evaluations to Clinical Deployments",
-    venue: "Midwest Artificial Intelligence Conference",
-    date: "Fall 2024",
-    type: "Invited Talk"
-  },
-  {
-    title: "Democratizing Agentic AI for Healthcare Systems",
-    venue: "Women in Data Science (WiDS) Conference",
-    date: "Spring 2024",
-    type: "Keynote"
-  },
-  {
-    title: "Responsible AI & Multi-Agent Collaboration: The Next Frontier",
-    venue: "IEEE Central Indiana Section Seminar",
-    date: "Late 2023",
-    type: "Presentation"
-  },
-  {
-    title: "Aligning Foundations Models: Human Feedback in the Loop",
-    venue: "Indiana University Bloomington NLP Colloquium",
-    date: "Fall 2023",
-    type: "Invited Talk"
-  }
-];
 
-export const writingArticles: Article[] = [
-  {
-    title: "Evaluating Agentic Workflows: Beyond Standard Accuracy Metrics",
-    excerpt: "Standard LLM benchmarks fail when agents interact dynamically. We discuss state-space tracing, tool calling fidelity, and how to evaluate agentic systems for enterprise readiness.",
-    date: "May 2026",
-    readTime: "6 min read",
-    slug: "evaluating-agentic-workflows"
-  },
-  {
-    title: "Operationalizing AI in Radiology: A Practical Framework",
-    excerpt: "Deploying AI in healthcare isn't just about model precision. It requires careful orchestration, human-in-the-loop validation, and addressing integration friction with legacy PACS systems.",
-    date: "March 2026",
-    readTime: "8 min read",
-    slug: "operationalizing-ai-radiology"
-  },
-  {
-    title: "Teaching the Next Generation of AI Builders at Rose-Hulman",
-    excerpt: "How we structure computer science curriculum to move students from passive consumers of APIs to active developers of responsible, self-correcting machine learning systems.",
-    date: "January 2026",
-    readTime: "5 min read",
-    slug: "teaching-next-gen-ai-builders"
-  }
-];
+
+

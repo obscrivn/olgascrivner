@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Mail,
   ExternalLink,
@@ -228,6 +229,10 @@ export default function Home() {
           {/* Desktop Nav: Filtered down to exact links requested in mockup */}
           <nav className="hidden md:flex items-center gap-8">
             <a href="#about" className="text-xs font-semibold uppercase tracking-wider text-charcoal-muted hover:text-accent-violet transition-colors">About</a>
+            <Link href="/ai-agent-research" className="text-xs font-semibold uppercase tracking-wider text-accent-violet hover:text-accent-violet transition-colors flex items-center gap-1">
+              <span>Agent Research</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-accent-violet animate-pulse"></span>
+            </Link>
             <a href="#projects" className="text-xs font-semibold uppercase tracking-wider text-charcoal-muted hover:text-accent-violet transition-colors">Projects</a>
             <a href="#publications" className="text-xs font-semibold uppercase tracking-wider text-charcoal-muted hover:text-accent-violet transition-colors">Publications</a>
             {/* <a href="#contact" className="text-xs font-semibold uppercase tracking-wider text-charcoal-muted hover:text-accent-violet transition-colors">Contact</a> */}
@@ -253,6 +258,14 @@ export default function Home() {
             >
               About
             </a>
+            <Link
+              href="/ai-agent-research"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-xs font-semibold uppercase tracking-wider text-accent-violet hover:text-accent-violet transition-colors flex items-center justify-between"
+            >
+              <span>Agent Research</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-accent-violet"></span>
+            </Link>
             <a
               href="#projects"
               onClick={() => setMobileMenuOpen(false)}
@@ -710,9 +723,18 @@ export default function Home() {
                     <Sparkles size={16} />
                   </div>
                   <h3 className="text-sm font-bold text-charcoal mb-2 font-sans">Agentic AI & Multi-Agent Systems</h3>
-                  <p className="text-xs text-charcoal-muted leading-relaxed font-light">
+                  <p className="text-xs text-charcoal-muted leading-relaxed font-light mb-4">
                     Designing collaborative AI systems that can reason, plan, and act.
                   </p>
+                </div>
+                <div className="pt-3 border-t border-charcoal/5">
+                  <Link
+                    href="/ai-agent-research"
+                    className="text-[11px] font-bold uppercase tracking-wider text-accent-violet hover:underline inline-flex items-center gap-1 group"
+                  >
+                    Research Agenda & Evals
+                    <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </Link>
                 </div>
               </div>
 

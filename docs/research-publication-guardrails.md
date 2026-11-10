@@ -2,7 +2,7 @@
 
 Updated 9 November 2026. These restrictions apply to future research-page content, project cards, metadata, figures, links and related portfolio updates.
 
-Primary evidence: [Kage's research portfolio](Olga_Scrivner_AI_Agent_Research_Portfolio.docx). The [Phase 1 review](research-portfolio-phase-1-review.md) maps that inventory to the current page. This document records the user's binding publication restrictions; it does not replace the inventory or authorize publishing.
+Primary evidence: Kage's research portfolio (`Olga_Scrivner_AI_Agent_Research_Portfolio.docx`, maintained locally and excluded from the public repository). The internal Phase 1 review maps that inventory to the page and is also kept local. This document records the user's binding publication restrictions; it does not replace the inventory or authorize publishing.
 
 ## Public narrative
 
@@ -68,6 +68,8 @@ Verify individual contribution claims for every collaborative artifact before as
 The original implementation task did not authorize publication, deployment, changes to repository visibility or experiments. Do not publish private sources or change their sharing permissions. Follow the repository workflow and the user's authorized phase for any later implementation.
 
 The subsequent deployment-test request authorizes committing reviewed website changes on the current feature branch, pushing that branch to GitHub and checking its automatic Vercel preview after lint, build and diff review pass. It does not authorize merging into `main`, production deployment, repository visibility changes, experiments or changes to Vercel or GoDaddy settings. Private source documents and internal research reviews must remain outside the pushed changes.
+
+The user's later production-release request authorizes the reviewed homepage and research-page revisions, replacing public email contact with the verified LinkedIn profile, committing and pushing these changes, merging the feature branch into `main` and checking the resulting automatic Vercel production deployment. It does not authorize repository visibility changes, experiments, private-source publication or changes to Vercel or GoDaddy settings. This release authorization supersedes the earlier local-only and preview-only restrictions for these website changes.
 
 ## Local implementation record — 9 November 2026
 

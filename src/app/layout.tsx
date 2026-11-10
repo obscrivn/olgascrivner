@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Olga Scrivner | AI Researcher, Educator & Entrepreneur",
-  description: "Personal website of Olga Scrivner. Assistant Professor of Computer Science at Rose-Hulman Institute of Technology, Adjunct in Data Science at Indiana University, Co-Founder & Head of AI at Scrivner Solutions, and builder of Radient AI. Research and building in Agentic AI, AI Evaluation, and Responsible AI.",
+  title: "Olga Scrivner | AI Researcher, Educator & Builder",
+  description: "Olga Scrivner studies AI agents, evaluation, and reusable capabilities, connecting scientific inquiry with practical applications across domains.",
   keywords: [
     "Olga Scrivner",
     "Agentic AI",
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Olga Scrivner" }],
   openGraph: {
-    title: "Olga Scrivner | AI Researcher, Educator & Entrepreneur",
-    description: "AI researcher, educator, entrepreneur, and builder working at the intersection of AI evaluation, agentic AI, healthcare operations, and responsible AI.",
+    title: "Olga Scrivner | AI Researcher, Educator & Builder",
+    description: "Exploring the Capabilities of AI. Research on AI agents, evaluation, and reusable capabilities, connecting scientific inquiry with practical applications across domains.",
     url: "https://olgascrivner.com",
     siteName: "Olga Scrivner Portfolio",
     locale: "en_US",

@@ -52,10 +52,9 @@ export interface ResearchProduct {
 export const personalInfo = {
   name: "Olga Scrivner",
   title: "AI Researcher • Educator • Builder",
-  headline: "Building trustworthy AI systems for healthcare and society.",
-  bio: "Working at the intersection of AI evaluation, agentic AI, healthcare operations, and responsible AI.",
+  headline: "Exploring the Capabilities of AI.",
+  bio: "My research focuses on AI agents, evaluation, and reusable capabilities, connecting scientific inquiry with practical applications across domains.",
   subHeadline: "Co-Founder & Head of AI at Scrivner Solutions Inc • Building Radient AI • Former OpenAI Expert Consultant • Assistant Professor at Rose-Hulman Institute of Technology",
-  email: "olga@scrivnersolutions.com",
   socials: {
     linkedin: "https://www.linkedin.com/in/olgascrivner/",
     github: "https://github.com/obscrivn",
@@ -78,7 +77,7 @@ export const experiences: Experience[] = [
     role: "Co-Founder & Head of AI",
     organization: "Scrivner Solutions / Radient AI",
     period: "2022 – Present",
-    description: "Directing AI architecture and product engineering for Radient AI, an operations intelligence platform deployed in clinical and healthcare settings to streamline radiology workflows.",
+    description: "Directing AI architecture and product engineering, including a synthetic-data radiology operations prototype and public architecture demonstrations.",
     current: true
   },
   {
@@ -105,7 +104,7 @@ export const experiences: Experience[] = [
 export const projects: Project[] = [
   {
     title: "Radient AI",
-    description: "An AI-powered operations intelligence platform designed to optimize radiology workflows, reduce report turnaround times, and assist healthcare systems with real-time operational insights.",
+    description: "A synthetic-data radiology operations prototype exploring staffing, utilization and the separation of operational calculations from model-generated explanations.",
     category: "Flagship",
     role: "Co-Founder & Head of AI",
     tags: ["Healthcare AI", "Agentic Systems", "LLM Orchestration", "Operations"],
@@ -121,7 +120,7 @@ export const projects: Project[] = [
   },
   {
     title: "AI Evaluation & Multi-Agent Workflows",
-    description: "Designing frameworks for assessing LLM safety, output reliability, and multi-agent system coordination. Developing robust benchmark methods for industry-grade deployments.",
+    description: "Investigating reusable agent capabilities, evidence-linked evaluation and conservative refinement through research code, descriptive studies and exploratory prototypes.",
     category: "AI Impact",
     role: "Researcher & Consultant",
     tags: ["AI Evaluation", "Multi-Agent Systems", "Responsible AI", "Safety"]
